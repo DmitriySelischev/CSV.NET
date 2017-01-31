@@ -7,7 +7,7 @@
     <ProjectGuid>{B3EE3BF5-C1AD-43C1-AAF7-A832547E64DD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>csvdotnet</RootNamespace>
+    <RootNamespace>CSVdotNET</RootNamespace>
     <AssemblyName>csvdotnet</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -40,7 +40,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\CsvConfiguration.cs" />
+    <Compile Include="Configuration\CsvMappedConfiguration.cs" />
+    <Compile Include="CsvException.cs" />
+    <Compile Include="CsvWritingException.cs" />
+    <Compile Include="Mapping\ICsvMapping.cs" />
+    <Compile Include="Mapping\CsvMapping.cs" />
+    <Compile Include="Reader\CsvMappedReader.cs" />
+    <Compile Include="Reader\CsvReader.cs" />
+    <Compile Include="CsvReadingException.cs" />
+    <Compile Include="Reader\ICsvMappedReader.cs" />
+    <Compile Include="Reader\ICsvReader.cs" />
+    <Compile Include="Records\CsvMappedRecord.cs" />
+    <Compile Include="Records\CsvRecord.cs" />
+    <Compile Include="Records\ICsvMappedRecord.cs" />
+    <Compile Include="Records\ICsvRecord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Writer\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
